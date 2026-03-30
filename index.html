@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldle Ultra: 5-Guess Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1 id="mode-title">Daily Country</h1>
+            <div id="guess-counter">Guesses: 0/5</div>
+        </header>
+
+        <div id="map-container">
+            </div>
+
+        <div id="hint-box" class="hidden">
+            <strong>REVEALED HINTS:</strong>
+            <ul id="hint-list"></ul>
+        </div>
+
+        <div class="input-area" id="controls">
+            <input type="text" id="guess-input" list="country-list" placeholder="Type a country name..." autocomplete="off">
+            <datalist id="country-list"></datalist>
+            <button id="submit-btn" onclick="checkGuess()">Guess</button>
+            <p id="message"></p>
+        </div>
+
+        <div id="guess-history">
+            </div>
+
+        <div class="mode-toggle">
+            <button onclick="setMode('daily')">Play Daily</button>
+            <button onclick="setMode('practice')">New Practice Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
